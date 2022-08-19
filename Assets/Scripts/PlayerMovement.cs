@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
 
     public Rigidbody2D rb;
     public Camera cam;
@@ -20,10 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.position.x > -10 && rb.position.x < 10 && rb.position.y > -10 && rb.position.y < 10)
-        {
-            rb.MovePosition(rb.position + movement * Time.fixedDeltaTime * moveSpeed);
-        }
+        rb.AddForce(movement * Time.fixedDeltaTime * moveSpeed, ForceMode2D.Impulse);
         
 
         Vector2 lookDir = mousePos - rb.position;

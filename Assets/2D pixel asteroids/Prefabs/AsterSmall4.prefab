@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 303346562464526587}
   - component: {fileID: -2842235847008068729}
   - component: {fileID: 3800666905949724653}
+  - component: {fileID: 7805942781285613106}
   m_Layer: 9
   m_Name: AsterSmall4
   m_TagString: Untagged
@@ -123,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22
+--- !u!114 &7805942781285613106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266873878386540212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b76867d5678038428f90e3ecdd7b87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidMoveSpeed: 2

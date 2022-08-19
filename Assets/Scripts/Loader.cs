@@ -24,14 +24,14 @@ public class Loader : MonoBehaviour
         //ensures that the asteroid spawns from a location outside the Camera
         //by assigning proper vector locations,
 
-        randomLocation.x = rnd.Next(-13, 13);
+        randomLocation.x = rnd.Next(-30, 30);
         int de = rnd.Next(0, 2);
         if (de == 0) { 
-            randomLocation.y = rnd.Next(-8, -6);
+            randomLocation.y = rnd.Next(-30, -6);
         }
         if (de == 1)
         {
-            randomLocation.y = rnd.Next(6, 10);
+            randomLocation.y = rnd.Next(6, 30);
         }
         randomLocation.z = 0;
 
@@ -47,14 +47,15 @@ public class Loader : MonoBehaviour
             Vector2 playerLocation = rb.position;
             Rigidbody2D asteroidRB = asteroid.GetComponent<Rigidbody2D>();
 
-            if (de == 0)
-            {
-                asteroidRB.AddForce(asteroidMoveSpeed * Time.deltaTime * -player.transform.position, ForceMode2D.Impulse);
-            }
-            if (de == 1)
-            {
-                asteroidRB.AddForce(asteroidMoveSpeed * Time.deltaTime * player.transform.position, ForceMode2D.Impulse);
-            }
+            //if (de == 0)
+            //{
+            //    asteroidRB.AddForce(asteroidMoveSpeed * Time.deltaTime * -player.transform.position, ForceMode2D.Impulse);
+            //    asteroid.transform.position = Vector2.MoveTowards(asteroid.transform.position, player.transform.position, asteroidMoveSpeed * Time.deltaTime);
+            //}
+            //if (de == 1)
+            //{
+            //    asteroidRB.AddForce(asteroidMoveSpeed * Time.deltaTime * player.transform.position, ForceMode2D.Impulse);
+            //}
         }
 
         for (int i = 0; i < createdRoids.Count; i++)
